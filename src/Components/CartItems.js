@@ -1,10 +1,10 @@
 import React from 'react';
-import CartItemComponent from './CartItem';
 import './Component.css'
-// import AddItem from './AddItem';
+import CartItemComponent from './CartItemComponent';
+import AddItem from './AddItem';
 
 
-const CartItems = (props) => {
+const CartItems = ({ cartItemsList, products, getNumber, submitted, changed, price, checkOut }) => {
 	return (
 		<div className="container">
 			<h1>Cart Items</h1>
@@ -16,15 +16,24 @@ const CartItems = (props) => {
 						<div className="col-md-2">Quantity</div>
 					</div>
 				</div>
-				<CartItemComponent cartItemsList={props.cartItemsList} />
+				<CartItemComponent cartItemsList={cartItemsList}/>
 			</div>
-			<label>Quantity</label>
-			<div>
-				<input className="input"></input>
-			</div>
-			<label>Products</label>
+
+			<form onSubmit={submitted}>
+				<p>Total Price: {price}</p>
+				<label>Quantity</label>
+				<div>
+					<input placeholder="1" type="number" name="quantity" onChange={getNumber}></input>
+				</div>
+				<label>Products</label>
+				<AddItem products={products} changed={changed} />
+				<button className="btn btn-primary">Submit</button>
+			</form>
+
 		</div>
 	)
 };
 
 export default CartItems;
+
+
