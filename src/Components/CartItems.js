@@ -19,8 +19,10 @@ const CartItems = ({ cartItemsList, products, getNumber, submitted, changed, pri
 				<CartItemComponent cartItemsList={cartItemsList}/>
 			</div>
 
+			<button className="btn btn-success" onClick={checkOut}>Update Total</button>
+
 			<form onSubmit={submitted}>
-				<p>Total Price: {price}</p>
+				<p>Total Price: ${price}</p>
 				<label>Quantity</label>
 				<div>
 					<input placeholder="1" type="number" name="quantity" onChange={getNumber}></input>

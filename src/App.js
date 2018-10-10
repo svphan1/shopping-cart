@@ -37,6 +37,10 @@ class App extends Component {
 
   };
 
+  componentDidMount() {
+    this.checkOut()
+  }
+
   captureNumber = (e) => {
     this.setState({ current_quantity: Number(e.target.value) })
     console.log(e.target.value) 
@@ -52,6 +56,7 @@ class App extends Component {
     };
     const finalList = current_list.concat(new_list);
     this.setState({ cartItemsList: finalList });
+    this.checkOut();
   }
 
   selectChanged = (e) => {
@@ -62,15 +67,10 @@ class App extends Component {
   }
 
   checkOut = () => {
-    this.setState({totalPrice: this.state.current_quantity * this.state.current_priceInCents})
+    this.setState({totalPrice: this.state.cartItemsList.reduce((accum, current) => {
+      return accum + (current.product.priceInCents);
+    },0 )})
   };
-
-// checkOut = () => {
-//   this.setState({totalPrice: this.state.cartItemsList.reduce((accum, current) => {
-//     return accum + current.products.priceInCents  
-//   },0 )}
-// )
-// };
 
   render() {
 
@@ -87,7 +87,7 @@ class App extends Component {
             getNumber={this.captureNumber}
             submitted={this.addProduct}
             changed={this.selectChanged} 
-            price={this.totalPrice}
+            price={this.state.totalPrice}
             checkOut={this.checkOut} />
         </div>
 

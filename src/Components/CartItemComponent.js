@@ -1,9 +1,9 @@
 import React from 'react';
 
 const CartItemComponent = ({cartItemsList}) => {
-	return cartItemsList.map(item => {
+	return cartItemsList.map((item, i) => {
 		return (
-			<div className="list-group-item">
+			<div key={i}className="list-group-item">
 				<div className="collection-item">
 					<div className="row">
 						<div className="col-md-8">{item.product.name}</div>
