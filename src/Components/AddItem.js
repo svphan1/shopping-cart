@@ -10,7 +10,7 @@ const AddItem = ({ products, changed }) => {
     <div>
       <select onChange={changed} className="select">
         <option selected disabled>Select a product...</option>
-        { dropDown }
+        {dropDown}
       </select>
     </div>
   )

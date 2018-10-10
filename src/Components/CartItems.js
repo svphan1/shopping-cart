@@ -16,7 +16,7 @@ const CartItems = ({ cartItemsList, products, getNumber, submitted, changed, pri
 						<div className="col-md-2">Quantity</div>
 					</div>
 				</div>
-				<CartItemComponent cartItemsList={cartItemsList}/>
+				<CartItemComponent cartItemsList={cartItemsList} />
 			</div>
 
 			<button className="btn btn-success" onClick={checkOut}>Update Total</button>
