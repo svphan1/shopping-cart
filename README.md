@@ -1,4 +1,4 @@
-firebase: https://shopping-cart-son.firebaseapp.com/
+Surge link : irate-vest.surge.sh
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
