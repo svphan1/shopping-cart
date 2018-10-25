@@ -3,8 +3,16 @@ import './Component.css'
 import CartItemComponent from './CartItemComponent';
 import AddItem from './AddItem';
 
+const CartItems = ({
+	cartItemsList,
+	products,
+	getNumber,
+	submitted,
+	changed,
+	checkOut }) => {
 
-const CartItems = ({ cartItemsList, products, getNumber, submitted, changed, price, checkOut }) => {
+	const totalPrice = checkOut();
+
 	return (
 		<div className="container">
 			<h1>Cart Items</h1>
@@ -19,10 +27,8 @@ const CartItems = ({ cartItemsList, products, getNumber, submitted, changed, pri
 				<CartItemComponent cartItemsList={cartItemsList} />
 			</div>
 
-			<button className="btn btn-success" onClick={checkOut}>Update Total</button>
-
 			<form onSubmit={submitted}>
-				<p>Total Price: ${price}</p>
+				<p>Total Price: ${totalPrice}</p>
 				<label>Quantity</label>
 				<div>
 					<input placeholder="1" type="number" name="quantity" onChange={getNumber}></input>

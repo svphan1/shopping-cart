@@ -67,12 +67,12 @@ class App extends Component {
   }
 
   checkOut = () => {
-    this.setState({
-      totalPrice: this.state.cartItemsList.reduce((accum, current) => {
-        return accum + (current.product.priceInCents);
-      }, 0)
-    })
+    const totalPrice = this.state.cartItemsList.reduce((accum, current) => {
+      return accum + (current.product.priceInCents * current.quantity);
+    }, 0)
+    return totalPrice;
   };
+
 
   render() {
 
