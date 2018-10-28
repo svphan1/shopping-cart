@@ -1,4 +1,4 @@
-Surge link : irate-vest.surge.sh
+Surge link : http://irate-vest.surge.sh
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
