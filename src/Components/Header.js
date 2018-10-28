@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const CartHeader = () => {
 	return (
@@ -6,6 +6,6 @@ const CartHeader = () => {
 			<a className="navbar-brand" href="#">Shopping Cart</a>
 		</nav>
 	)
-};
+}
 
-export default CartHeader;
+export default CartHeader

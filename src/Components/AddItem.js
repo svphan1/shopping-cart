@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const AddItem = ({ products, changed }) => {
   const dropDown = products.map((product) => {
@@ -6,7 +6,7 @@ const AddItem = ({ products, changed }) => {
       <option
         key={product.id}
         value={product.name}
-        className="col-md-8">{product.name} {product.priceInCents}</option>
+        className="col-md-8">{product.name} {product.priceInDollars}</option>
     )
   })
   return (
@@ -17,6 +17,6 @@ const AddItem = ({ products, changed }) => {
       </select>
     </div>
   )
-};
+}
 
-export default AddItem;
+export default AddItem

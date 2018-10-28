@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const CartItemComponent = ({ cartItemsList }) => {
 	return cartItemsList.map((item, i) => {
@@ -7,15 +7,16 @@ const CartItemComponent = ({ cartItemsList }) => {
 				<div className="collection-item">
 					<div className="row">
 						<div className="col-md-8">{item.product.name}</div>
-						<div className="col-md-2">{item.product.priceInCents}</div>
+						<div className="col-md-2">{item.product.priceInDollars}</div>
 						<div className="col-md-2">{item.quantity}</div>
 					</div>
 				</div>
 			</div>
 		)
 	})
-};
-export default CartItemComponent;
+}
+
+export default CartItemComponent
 
 
 

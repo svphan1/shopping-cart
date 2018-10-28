@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const CartFooter = ({ copyright }) => {
 	return (
@@ -6,6 +6,6 @@ const CartFooter = ({ copyright }) => {
 			<a className="navbar-brand" href="#">&copy; {copyright}</a>
 		</nav>
 	)
-};
+}
 
-export default CartFooter;
+export default CartFooter

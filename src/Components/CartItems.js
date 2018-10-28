@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 import './Component.css'
-import CartItemComponent from './CartItemComponent';
-import AddItem from './AddItem';
+import CartItemComponent from './CartItemComponent'
+import AddItem from './AddItem'
 
 const CartItems = ({
 	cartItemsList,
@@ -9,9 +9,10 @@ const CartItems = ({
 	getNumber,
 	submitted,
 	changed,
-	checkOut }) => {
+	checkOut
+}) => {
 
-	const totalPrice = checkOut();
+	const totalPrice = checkOut()
 
 	return (
 		<div className="container">
@@ -40,8 +41,8 @@ const CartItems = ({
 
 		</div>
 	)
-};
+}
 
-export default CartItems;
+export default CartItems
 
 
